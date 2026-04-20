@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="no">
+<head>
+<meta charset="utf-8" />
+<title>BBQ — Tech&amp;BBQ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+
+<nav class="nav">
+  <a class="logo" href="/techbbq/" aria-label="Tech og BBQ — hjem">
+    <span class="logo-prompt">$</span>tech<span class="logo-amp">&amp;</span>bbq<span class="logo-cursor" aria-hidden="true"></span>
+  </a>
+  <div class="nav-links mono">
+    <a href="/techbbq/">← tilbake</a>
+  </div>
+  <div class="nav-spacer"></div>
+</nav>
+
+<main>
+  <section class="hero bbq-hero">
+    <div class="mono eyebrow"><span class="ember">●</span> CATERING</div>
+    <h1 class="hero-headline fade-up">
+      Røkt i 14 timer.<br>
+      Servert hos deg.
+    </h1>
+
+    <div class="hero-body fade-up">
+      <p class="hero-lede">
+        Brisket over eikeved — salt, pepper, tid.<br>
+        Hele tallerkenen, levert der du er.
+      </p>
+    </div>
+  </section>
+
+  <section class="menu">
+    <div class="menu-inner">
+      <div class="mono eyebrow"><span class="ember">●</span> TALLERKEN</div>
+      <h2 class="menu-headline">
+        BBQ-tallerken, <em>per person</em>
+      </h2>
+
+      <ul class="menu-list">
+        <li class="menu-row">
+          <div class="menu-row-head">
+            <span class="menu-row-title">Røkt brisket</span>
+            <span class="menu-row-weight mono">200 G</span>
+          </div>
+          <p class="menu-row-copy">Salt, svart pepper, eikeved. Cirka 14 timer i røyk. Skåret for hånd.</p>
+        </li>
+        <li class="menu-row">
+          <div class="menu-row-head">
+            <span class="menu-row-title">Potetsalat</span>
+            <span class="menu-row-weight mono">150 G</span>
+          </div>
+          <p class="menu-row-copy">Sennep, sylteagurk, syltet løk. Ingen majones-vegg.</p>
+        </li>
+        <li class="menu-row">
+          <div class="menu-row-head">
+            <span class="menu-row-title">Coleslaw</span>
+            <span class="menu-row-weight mono">120 G</span>
+          </div>
+          <p class="menu-row-copy">Hvitkål, gulrot, eddikbasert dressing. Knasende friskt, ikke vått.</p>
+        </li>
+        <li class="menu-row">
+          <div class="menu-row-head">
+            <span class="menu-row-title">Pinto-bønner</span>
+            <span class="menu-row-weight mono">150 G</span>
+          </div>
+          <p class="menu-row-copy">Småkokt med kjøttkraft, løk og chipotle. Mildt og røykaktig.</p>
+        </li>
+        <li class="menu-row">
+          <div class="menu-row-head">
+            <span class="menu-row-title">Til siden</span>
+            <span class="menu-row-weight mono">—</span>
+          </div>
+          <p class="menu-row-copy">Hvitt brød, syltede jalapeños, rå løk, pickles, bbq-saus.</p>
+        </li>
+      </ul>
+
+      <div class="price-row mono">
+        <span class="price-label">PRIS</span>
+        <span class="price-value">kr 450,–<span class="price-per"> / person</span></span>
+      </div>
+    </div>
+  </section>
+
+  <section class="order">
+    <div class="order-inner">
+      <div class="mono eyebrow"><span class="ember">●</span> BESTILL</div>
+      <h2 class="order-headline">Legg inn ordre.</h2>
+
+      <form id="order-form" class="order-form" novalidate>
+        <div class="field field-people">
+          <label class="mono field-label" for="people">ANTALL PERSONER</label>
+          <div class="stepper">
+            <button type="button" class="stepper-btn" data-step="-1" aria-label="Reduser">−</button>
+            <input id="people" name="people" type="number" min="1" max="500" value="8" inputmode="numeric" required>
+            <button type="button" class="stepper-btn" data-step="1" aria-label="Øk">+</button>
+          </div>
+        </div>
+
+        <div class="field field-address">
+          <label class="mono field-label" for="address">ADRESSE</label>
+          <input id="address" name="address" type="text" placeholder="Rosenkrantz' gate 17, 0160 Oslo" required>
+        </div>
+
+        <div class="field field-date">
+          <label class="mono field-label" for="date">DATO</label>
+          <input id="date" name="date" type="date" required>
+        </div>
+
+        <div class="field field-time">
+          <label class="mono field-label" for="time">TID</label>
+          <input id="time" name="time" type="time" value="18:00" required>
+        </div>
+
+        <div class="summary" aria-live="polite">
+          <div class="summary-row">
+            <span class="mono summary-label">BBQ-tallerken × <span id="sum-people">8</span></span>
+            <span class="mono summary-value" id="sum-total">kr 3 600,–</span>
+          </div>
+          <div class="summary-note mono">Leveres ferdig pakket i isolerte bokser. Vi varsler 30 min før ankomst.</div>
+        </div>
+
+        <button type="submit" class="cta mono order-cta">
+          <span class="cta-arrow">&gt;</span> Send bestilling
+        </button>
+
+        <p class="form-hint mono" id="form-hint" hidden>
+          Fyll inn alle feltene før du sender.
+        </p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<script src="order.js"></script>
+</body>
+</html>
