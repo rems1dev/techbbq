@@ -12,11 +12,20 @@
 <body>
 
 <nav class="nav">
+  <button class="nav-toggle" id="nav-toggle" aria-label="Åpne meny" aria-expanded="false" aria-controls="nav-menu">
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+    <span class="nav-toggle-bar"></span>
+  </button>
   <a class="logo" href="../" aria-label="Tech og BBQ — hjem">
     <span class="logo-prompt">$</span>tech<span class="logo-amp">&amp;</span>bbq<span class="logo-cursor" aria-hidden="true"></span>
   </a>
-  <div class="nav-links mono">
-    <a href="../">← tilbake</a>
+  <div class="nav-links mono" id="nav-menu">
+    <a href="../">forside</a>
+    <a href="../#arbeid">arbeid</a>
+    <a href="../#tanker">tanker</a>
+    <a href="./">bbq</a>
+    <a href="../#kontakt">kontakt</a>
   </div>
   <div class="nav-spacer"></div>
 </nav>
@@ -139,6 +148,7 @@
   </section>
 </main>
 
+<script src="../nav.js"></script>
 <script src="order.js"></script>
 </body>
 </html>
