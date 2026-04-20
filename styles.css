@@ -159,6 +159,178 @@ body.nav-open .nav-toggle-bar:nth-child(3) { top: 21px; transform: rotate(-45deg
 }
 .cta-arrow { color: var(--ember); }
 
+/* ─── tanker (blog) ───────────────────────────────────── */
+.tanker-hero { padding-bottom: 60px; }
+.tanker-hero .hero-lede { margin-top: 28px; max-width: 560px; }
+
+.thoughts-section {
+  padding: 20px 48px 140px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.thoughts-loading,
+.thoughts-empty,
+.thoughts-error {
+  padding: 60px 0;
+  font-size: 13px;
+  letter-spacing: 2px;
+  opacity: 0.7;
+  text-align: center;
+}
+
+.blink-dots {
+  display: inline-block;
+  animation: tb-blink 1.1s steps(1) infinite;
+}
+
+.thought {
+  display: block;
+  padding: 40px 0;
+  border-top: 1px solid rgba(26,22,20,0.18);
+  transition: padding-left 0.3s cubic-bezier(.2,.7,.2,1);
+}
+.thought:last-child { border-bottom: 1px solid rgba(26,22,20,0.18); }
+.thought:hover { padding-left: 12px; }
+
+.thought-meta {
+  font-size: 11px;
+  letter-spacing: 3px;
+  opacity: 0.6;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+.thought-title {
+  font-family: 'Archivo', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  line-height: 1.05;
+  margin: 0 0 14px;
+  max-width: 760px;
+  text-wrap: balance;
+}
+
+.thought-excerpt {
+  font-size: 17px;
+  line-height: 1.55;
+  margin: 0 0 18px;
+  opacity: 0.82;
+  max-width: 680px;
+}
+
+.thought-more {
+  font-size: 11px;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: var(--ink);
+}
+
+/* single post */
+.post {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 80px 48px 140px;
+}
+
+.post-loading,
+.post-error {
+  padding: 60px 0;
+}
+.post-error-title {
+  font-family: 'Archivo', sans-serif;
+  font-size: 40px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin: 12px 0 24px;
+}
+
+.post-header { margin-bottom: 48px; }
+.post-title {
+  font-family: 'Archivo', sans-serif;
+  font-size: clamp(36px, 5vw, 60px);
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 0.98;
+  margin: 8px 0 18px;
+  text-wrap: balance;
+}
+.post-meta {
+  display: flex;
+  gap: 12px;
+  font-size: 12px;
+  letter-spacing: 2px;
+  opacity: 0.65;
+  text-transform: uppercase;
+}
+
+.post-body {
+  font-size: 18px;
+  line-height: 1.65;
+  color: var(--ink);
+}
+.post-body > * + * { margin-top: 24px; }
+.post-body p { margin: 0; }
+.post-body h2 {
+  font-family: 'Archivo', sans-serif;
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  margin-top: 48px;
+  line-height: 1.1;
+}
+.post-body h3 {
+  font-family: 'Archivo', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  margin-top: 40px;
+}
+.post-body a {
+  color: var(--ink);
+  text-decoration: underline;
+  text-decoration-color: var(--ember);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+}
+.post-body blockquote {
+  margin: 32px 0;
+  padding: 4px 0 4px 20px;
+  border-left: 3px solid var(--ember);
+  font-style: italic;
+  opacity: 0.85;
+}
+.post-body img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+.post-body pre,
+.post-body code {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 14px;
+  background: rgba(26,22,20,0.08);
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+.post-body pre {
+  padding: 16px 18px;
+  overflow-x: auto;
+  line-height: 1.5;
+}
+.post-body ul, .post-body ol { padding-left: 24px; }
+.post-body li + li { margin-top: 8px; }
+
+.post-footer { margin-top: 72px; padding-top: 32px; border-top: 1px solid rgba(26,22,20,0.18); }
+.post-back {
+  font-size: 13px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  border-bottom: 1.5px solid var(--ink);
+  padding-bottom: 2px;
+}
+
 /* ─── bbq page: shared bits ───────────────────────────── */
 .eyebrow {
   font-size: 12px;
@@ -426,4 +598,13 @@ body.nav-open .nav-toggle-bar:nth-child(3) { top: 21px; transform: rotate(-45deg
   .order-form { grid-template-columns: 1fr; gap: 20px; }
   .summary-value { font-size: 20px; }
   .summary-label { font-size: 13px; }
+
+  .thoughts-section { padding: 10px 22px 80px; }
+  .thought { padding: 28px 0; }
+  .thought-title { font-size: 28px; letter-spacing: -1px; }
+  .thought-excerpt { font-size: 15px; }
+  .post { padding: 48px 22px 80px; }
+  .post-body { font-size: 16px; }
+  .post-body h2 { font-size: 22px; }
+  .post-body h3 { font-size: 18px; }
 }

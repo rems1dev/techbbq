@@ -2,12 +2,12 @@
 <html lang="no">
 <head>
 <meta charset="utf-8" />
-<title>Tech&amp;BBQ — innovasjonsbyrå</title>
+<title>Tanker — Tech&amp;BBQ</title>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="../styles.css">
 </head>
 <body>
 
@@ -17,39 +17,39 @@
     <span class="nav-toggle-bar"></span>
     <span class="nav-toggle-bar"></span>
   </button>
-  <a class="logo" href="#top" aria-label="Tech og BBQ — hjem">
+  <a class="logo" href="../" aria-label="Tech og BBQ — hjem">
     <span class="logo-prompt">$</span>tech<span class="logo-amp">&amp;</span>bbq<span class="logo-cursor" aria-hidden="true"></span>
   </a>
   <div class="nav-links mono" id="nav-menu">
-    <a href="#arbeid">arbeid</a>
-    <a href="tanker/">tanker</a>
-    <a href="bbq/">bbq</a>
-    <a href="#kontakt">kontakt</a>
+    <a href="../">forside</a>
+    <a href="../#arbeid">arbeid</a>
+    <a href="./">tanker</a>
+    <a href="../bbq/">bbq</a>
+    <a href="../#kontakt">kontakt</a>
   </div>
   <div class="nav-spacer"></div>
 </nav>
 
 <main>
-  <section id="top" class="hero">
+  <section class="hero tanker-hero">
+    <div class="mono eyebrow"><span class="ember">●</span> TANKER</div>
     <h1 class="hero-headline fade-up">
-      Når AI gjør alt mulig,<br>
-      hjelper vi deg<br>
-      forstå.
+      Vi skriver<br>
+      fordi vi tenker.
     </h1>
+    <p class="hero-lede fade-up">
+      Essays og notater fra prosjekter. Ingen kampanje, ingen vinkling.
+    </p>
+  </section>
 
-    <div class="hero-body fade-up">
-      <p class="hero-lede">
-        Vi utforsker teknologien,<br>
-        vi lytter til menneskene,<br>
-        og vi sørger for å skape verdi i samspillet.
-      </p>
-      <a href="mailto:remi@techbbq.no" class="cta mono">
-        <span class="cta-arrow">&gt;</span> Snakk med oss om AI
-      </a>
+  <section class="thoughts-section">
+    <div class="thoughts-list" id="thoughts-list">
+      <div class="thoughts-loading mono">Laster inn tanker<span class="blink-dots">...</span></div>
     </div>
   </section>
 </main>
 
-<script src="nav.js"></script>
+<script src="../nav.js"></script>
+<script src="tanker.js"></script>
 </body>
 </html>
