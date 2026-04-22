@@ -129,6 +129,43 @@ body.nav-open .nav-toggle-bar:nth-child(3) { top: 21px; transform: rotate(-45deg
   font-size: 114px;
 }
 
+.hero-grid-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 64px;
+  align-items: start;
+}
+.hero-text { min-width: 0; }
+.hero-visual {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 10px;
+}
+
+/* building blocks animation */
+.tbbq-blocks {
+  width: 300px;
+  height: 340px;
+  display: block;
+}
+.tbbq-blocks .block {
+  animation: tbbq-rise 6s infinite ease-out;
+  opacity: 0;
+  transform-origin: center bottom;
+}
+@keyframes tbbq-rise {
+  0%   { opacity: 0; transform: translateY(28px) scale(0.6); }
+  6%   { opacity: 0; transform: translateY(28px) scale(0.6); }
+  18%  { opacity: 1; transform: translateY(0) scale(1); }
+  82%  { opacity: 1; transform: translateY(0) scale(1); }
+  96%  { opacity: 0; transform: translateY(-8px) scale(0.95); }
+  100% { opacity: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .tbbq-blocks .block { animation: none; opacity: 1; transform: none; }
+}
+
 .hero-body {
   margin-top: 80px;
   max-width: 520px;
@@ -525,6 +562,9 @@ body.nav-open .nav-toggle-bar:nth-child(3) { top: 21px; transform: rotate(-45deg
 @media (max-width: 1024px) {
   .hero-headline { font-size: 84px; letter-spacing: -3px; }
   .bbq-hero .hero-headline { font-size: 72px; letter-spacing: -2.5px; }
+  .hero-grid-main { grid-template-columns: 1fr; gap: 32px; }
+  .hero-visual { justify-content: flex-start; padding-top: 0; }
+  .tbbq-blocks { width: 240px; height: 280px; }
 }
 
 @media (max-width: 720px) {
@@ -580,6 +620,7 @@ body.nav-open .nav-toggle-bar:nth-child(3) { top: 21px; transform: rotate(-45deg
   .hero-headline { font-size: 48px; letter-spacing: -1.5px; line-height: 0.95; }
   .hero-body { margin-top: 40px; }
   .hero-lede { font-size: 19px; }
+  .tbbq-blocks { width: 180px; height: 210px; }
   .cta { font-size: 14px; padding: 14px 18px; }
 
   .bbq-hero { padding-bottom: 60px; }
